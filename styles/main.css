@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background: #041b1a;
+}
+
+.container {
+    position: fixed;
+    background: #172121;
+    width: 20em;
+    height: 100vh;
+    z-index: 1000;
+}
+.button {
+    position: absolute;
+    right: 0;
+    opacity: .5;
+    width: 5em;
+    height: 100vh;
+}
+.content {
+    width: 15em;
+    height: 100vh;
+    padding: 1em;
+}
+.content h3 ~ h3 {
+    margin-top: .75em;
+}
+.content h3{
+        font-family: "Audiowide", serif;
+    color: hsla(205, 100%, 86%, 1);
+    background: #041b1a;
+    transition: all 1s;
+    border-bottom: 2px solid hsla(205, 100%, 86%, 1);
+}
+.content h3:hover {
+    color: #041b1a;
+    background: hsla(205, 100%, 86%, 1);
+    box-shadow: 0 0 50px 10px hsla(205, 100%, 86%, 1);*/
+}
+.content li {
+    font-family: "Comfortaa", serif;
+    font-size: .9em;
+    color: #abf2f0;
+    margin-top: .5em;
+    transition: all 1s;
+}
+.content li:hover {
+    color: #abf2f0;
+    background: #041b1a;
+    box-shadow: 0px 2px 10px 3px #abf2f0;
+    transform: translateY(-.55em);
+    transition: all 1s;
+}
+.panelOpen {
+    transform: translateX(0) !important;
+    transition: transform 1s;
+}
+.panelClose {
+    transform: translateX(-15em);
+    transition: transform 1s;
+}
+
+
+ul {
+    list-style-type: none;
+}
+li {
+    transform: translateX(0) rotateX(0);
+    transition: transform 1s cubic-bezier(.74, -0.63, .33, 1.69);
+}
+.remove {
+    display: none;
+}
+.mask {
+    transform: translateX(-14em) rotateX(360deg);
+}
+
+
+.spin {
+    box-shadow: 0 0 500px 150px #abf2f0;
+    max-width: 75em;
+    transform: translateX(10em) rotateY(-45deg) scale(.25);
+    transition: transform 1s;
+}
+.wrapper {
+    position: relative;
+    width: calc(100vw - 5em);
+    height: 100vh;
+    left: 5em;
+    perspective: 200px;
+}
+main {
+    position: absolute;
+    background: #d7f9f8;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+    transition: transform 1s;
+}
+main h1 {
+    font-family: "Audiowide", serif;
+}
+main h2 {
+    font-family: "Audiowide", serif;
+}
+main h3 {
+    font-family: "Audiowide", serif;
+    margin-top: .75em;
+    margin-bottom: .5em;
+}
+main p {
+    font-family: "Comfortaa", san-serif;
+}
+table {
+    font-family: "Comfortaa", san-serif;
+}
+th {
+    text-align: left;
+}
+td {
+    padding: 0 .5em;
+}
